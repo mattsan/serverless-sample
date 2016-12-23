@@ -1,13 +1,9 @@
 'use strict'
 
-module.exports.handler = (event, context, callback) => {
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: event
-    })
-  }
+const sender = require('./lib/sender')
 
-  callback(null, response)
+module.exports.handler = (event, context, callback) => {
+  sender.send(event, (err, result) => {
+    callback(err, result)
+  })
 }

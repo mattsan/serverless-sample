@@ -17,7 +17,9 @@
     "url": "https://github.com/mattsan/serverless-sample/issues"
   },
   "homepage": "https://github.com/mattsan/serverless-sample#readme",
-  "dependencies": {},
+  "dependencies": {
+    "request": "^2.79.0"
+  },
   "devDependencies": {
     "aws": "^0.0.3-2",
     "chai": "^3.5.0",
